@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+  	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+ 	<meta name="format-detection" content="telephone=no">
+ 	<meta name="format-detection" content="email=no" />
+ 	<script type="text/javascript" src="public/fs.js"></script>
+ 	<script type="text/javascript" src="public/jquery.js"></script>
+ 	<link rel="stylesheet" type="text/css" href="css/common.css">
+ 	<link rel="stylesheet" type="text/css" href="css/style.css">
+ 	<link rel="stylesheet" type="text/css" href="css/style1.css">
+	<!-- <script type="text/javascript" src="js/signup.js"></script> -->
+<!-- 	<script type="text/javascript" src='js/a.js'></script> -->
+	<title>报名支付</title>
+ 
+</head>
+<body>
+	<div class="paywap">
+		<div class="pay">
+			<div class="pay_number">	
+				<p>
+					<span class="font_text">重购费用：￥</span>
+					<span class="jqne"></span>
+					<div class="pay_qian">价值<span class="payqianSpan"></span>元</div>
+				</p>
+			</div>
+			<div class="pay_text_san">当前赛事可<span class="fonttext"></span><span class="zong"></span>次,你还可以购买<span class="dan"></span>次</div>
+			<ul class="pay_mode">
+				<li payType='1' class="onpay">
+					<span class="pay_modepic_02"></span>
+					<p>能量支付</p>
+					<div class="gr">剩余能量：</div>
+					<em></em>
+				</li>
+		  		<li payType='3'>
+					<span class="pay_modepic_01"></span>
+					<p>微信支付</p>
+					<em></em>
+				</li>  
+		
+			</ul>
+		</div>
+		<!--<div class="payOff" id="pay_button">支付</div> -->
+		<div class="payOff" onClick="zhifu();">支付</div>
+		<div class="promptBox promptBox2">支付余额不足</div>
+		<div class="nnegliangkuang nnegliangkuang2">
+			确认能量支付吗
+			<div class="nlzfanniu nlzfanniu2">确定</div>
+		</div>
+	</div>
+</body>
+</html>
+<script type="text/javascript" src="js/cgbmbs.js"></script>
+ 
+ 
+ 

@@ -1,0 +1,434 @@
+var cId = null;
+var orderType = null;
+var orderId = null;
+var energy = null;
+var orderEnergy = null;
+var openID = null;
+var orderNo = null;
+ /**
+  * 判断当前赛事是否允许当前用户进行复购、补码和边赛报名
+  * @return {[type]} [description]
+  */
+function panduan(){
+  cId = localStorage.getItem('cId');
+  openID = localStorage.getItem('openIDp');
+  window.localStorage.setItem("ctID",cId);
+  window.localStorage.setItem("yxwhOpenId",openID);
+  //alert("判断:"+cId+",openID:"+openID+",InfoId:"+InfoId);
+  popo();
+	$.ajax({
+		url:onconfig.url_test1+"/rest/depokerOrder/isRebuyOrAddonOrSideContest",//判断重购，加码，边赛下单接口
+		dataType: "JSONP", 
+		type: "GET",
+		data: {
+			"citizenId":cId, 
+			"depokerContestInfoId":InfoId
+		}, 
+		success: function(res) {
+			console.log(res)
+			if (res.code == "1000"){
+				fuzhi(res.datas);
+        	}else if(res.code == "1062"){//重购已经结束，不能重购
+        		alert(res.message);
+        	}else if(res.code == "1061"){//加码已结束，不能加码
+        		alert(res.message);
+        	}	
+		},
+		error:function(err) {
+			alert("网络异常") 
+		}
+	})
+};
+
+
+function fuzhi(datas){
+	//复购的状态
+	//alert("允许复购:"+datas.isRebuy+",允许补码:"+datas.isAddon+",允许边赛:"+datas.isSideContest);
+	if(datas.isRebuy == "1"){
+ 
+		$('.Urlbutton_li1').addClass('on').attr('disabled',false) 
+		
+	}else{
+		$('.Urlbutton_li1').removeClass('on').attr('disabled',true) 
+
+	}
+
+	//补码的状态
+	if(datas.isAddon == "1"){
+
+		$('.Urlbutton_li2').addClass('on').attr('disabled',false) 
+		
+	}else{
+		$('.Urlbutton_li2').removeClass('on').attr('disabled',true) 
+ 
+	}
+	//边赛的状态
+	if(datas.isSideContest == "1"){
+		
+		$('.Urlbutton_li3').addClass('on').attr('disabled',false) 
+		
+	}else{
+		$('.Urlbutton_li3').addClass('on').attr('disabled',true)
+	}
+}
+
+
+ function fugou(){//复购
+	orderType = $('.Urlbutton_li1').attr('orderType');
+	xiadan();
+}	
+function jiama(){//jiama
+	orderType = $('.Urlbutton_li2').attr('orderType');
+	xiadan();
+}
+function biansai(){//biansai
+	orderType = $('.Urlbutton_li3').attr('orderType');
+	xiadan();
+}
+ 
+
+
+/**
+ * 复购、补码、边赛下单接口
+ * @return {[type]} [description]
+ */
+function xiadan(){
+	 //alert("下单,cId:"+cId+",depId:"+InfoId+",type:"+orderType);
+	$.ajax({
+		url:onconfig.url_test1+"/rest/depokerOrder/rebuyOrAddonOrSideContest",// 重购,加码,边赛下单接口
+		dataType: "JSONP", 
+		type: "GET",
+		data: {
+			"citizenId":cId, 
+			"depokerContestInfoId":InfoId,
+			"orderType":orderType
+		}, 
+		success: function(res) {
+			console.log(res);
+			 
+			if (res.code == "1000") {	
+                window.localStorage.setItem("orderId",res.datas.orderId);//dingdanid
+                window.localStorage.setItem("isOrderCount",res.datas.isOrderCount);//总共可购买的次数
+                window.localStorage.setItem("orderNum",res.datas.orderNum);//当前用户已购买的次数
+                window.localStorage.setItem("signUpPayType",res.datas.signUpPayType);//订单支持支付方式1，现金和微信 2,能量 3 现金
+                window.localStorage.setItem("orderMoney",res.datas.orderMoney);//订单支付金额
+                window.localStorage.setItem("orderEnergy",res.datas.orderEnergy);//订单支付能量
+                window.localStorage.setItem("orderType",orderType);
+                window.localStorage.setItem("orderNo",res.datas.orderNo );
+               orderId = localStorage.getItem("orderId");
+			    orderNo = res.datas.orderNo;
+                //energy = localStorage.getItem('energyp');
+                orderEnergy = localStorage.getItem("orderEnergy");
+               
+                window.location.href="http://testwan-vc.yxwenge.com/danche/cgbmbs.html";
+
+            }else if(res.code == "1003"){
+				alert("下单失败");
+			}
+		},
+		error:function(err) {
+			alert("网络异常") 
+		}
+	})
+}
+
+function popo(){
+  $.ajax({
+        url:onconfig.url_test1+"/rest/citizen/getDepokerCitizenInfo",// 个人中心
+        dataType: "JSONP", 
+        type: "GET",
+        data: {
+            "citizenId":cId
+        }, 
+        success: function(res){
+           if(res.code == "1000"){
+           		localStorage.removeItem("eny");  //个人能量
+                localStorage.setItem("eny",res.datas.energy);
+           }
+        },
+          
+    }) ;
+
+}
+
+
+
+/**
+ * 根据类型进行界面初始化
+ * @return {[type]} [description]
+ */
+function chushihua(){
+	var xd_ng = localStorage.getItem('isOrderCount');  //总次数
+	var dq_ng = localStorage.getItem('orderNum');   //当前用户已购买的次数
+	var hou_shuliang =xd_ng-dq_ng;
+	 
+
+ 	var orderneng = '<span>'+localStorage.getItem("orderEnergy")+'能量</span>'
+	$('.jqne').append(orderneng);
+	   
+	   var orderqian ='<span>价值'+localStorage.getItem("orderMoney")+'元</span>'
+	$('.pay_qian').append(orderqian);
+	
+	var energy2w = '<b>'+localStorage.getItem('eny')+'</b>';
+	$('.gr').append(energy2w);//个人能量 
+ 
+
+ 	var zongpay = '<b>'+xd_ng+'</b>'
+		$('.zong').append(zongpay);//总次数
+
+
+	var danpay = '<b>'+hou_shuliang+'</b>'
+		$('.dan').append(danpay);// 剩余可购买次数
+	
+
+	if(orderType == null){
+		orderType = localStorage.getItem("orderType");
+	}
+	
+	if(orderType == '2'){
+		$('.font_text').text('重购费用：￥');
+		$('.fonttext').text('重购');
+		
+	}else if(orderType == '3'){
+		//console.log(2)
+		$('.font_text').text('补码费用：￥');
+		$('.fonttext').text('补码');
+		
+	}else if(orderType == '4'){
+		//console.log('其他')
+		$('.pay_text_san').css('display','none');
+		$('.font_text').text('边赛费用：￥');
+		$('.fonttext').text('边赛');
+		
+	}
+
+	
+  	var signUpPayTypew =localStorage.getItem('signUpPayType');//支持的支付方式
+ 	if(signUpPayTypew == 1){
+ 		zhuanhuan();//切换支付方式按钮
+ 		
+		
+ 	}else if(signUpPayTypew ==2){
+ 		$('.pay_mode li').eq(0).addClass('onpay').siblings().removeClass('onpay');
+ 		
+
+ 	}else if(signUpPayTypew ==3){
+ 		$('.pay_mode li').eq(1).addClass('onpay').siblings().removeClass('onpay');
+ 		
+	 	
+ 	}	
+
+}
+
+
+
+
+ 
+ 
+/**
+ * 支付接口
+ */
+function zhifu(){
+	payType = $('.onpay').attr('payType');
+	orderId = localStorage.getItem('orderId');
+	orderNo = localStorage.getItem('orderNo');
+	cID = localStorage.getItem('ctID');
+	openID = localStorage.getItem('yxwhOpenId');
+	energy = localStorage.getItem('eny');
+	orderEnergy = localStorage.getItem('orderEnergy');
+	//alert("payType========="+payType+"=====orderId"+orderId+"=========orderNo"+orderNo+"=========cID"+cID+"======openID"+openID);
+	if(payType == 3){
+		ajaxpayset();
+
+	}else if(payType == 1){
+		$('.nnegliangkuang2').show();
+		$(".nlzfanniu2").click(function(){
+			$('.nnegliangkuang2').hide();
+			//alert(payType+"payType")
+			ajaxpayset();
+		});
+		
+	};
+};
+
+function ajaxpayset(){
+ 	$.ajax({
+		url:onconfig.url_test1+"/rest/depokerOrder/depokerPay",//德扑赛事支付接口
+		dataType: "JSONP",
+		type: "GET",
+		data: {
+			'orderType':1,
+			'payType':payType, 
+			'orderId':orderId,
+			'openId':openID,
+			'citizenId':cID
+		}, 
+		success: function(res) {
+			
+			//alert("payType========="+payType+"=====orderId"+orderId+"=========orderNo"+orderNo+"=========cID"+cID+"======openID"+openID);
+			
+			if(res.code == '1000'){
+				if(payType == 3){ //微信支付
+					var payData = res.datas;
+						function onBridgeReady() {//微信收银台
+							WeixinJSBridge.invoke(
+								'getBrandWCPayRequest',
+								{
+						 			appId: payData.appId, //公众号名称，由商户传入
+									nonceStr: payData.nonceStr, //随机串
+									package: payData.package, //统一下单接口返回的prepay_id参数值，提交格式如
+									signType: 'MD5',
+									paySign: payData.paySign, //微信签名  后台
+									timeStamp: payData.timeStamp //时间戳，自1970年以来的秒数
+								},
+								function(res) {
+									console.log(res)
+									//微信支付成功后的操作，但是不一定会成功返回
+									if (res.err_msg == 'get_brand_wcpay_request:ok') {
+											//遵循uml时序图原则 先清空，再设置
+										//window.localStorage.setItem("orderFlag","");//d	
+									   // window.localStorage.setItem("orderFlag",orderType);//dingdanid
+										window.location.href="http://testwan-vc.yxwenge.com/danche/cgbmbssucces.html?state=1&orderFlag="+orderType+"&orderNo="+orderNo;
+									}
+								}
+							);
+						};
+						if (typeof WeixinJSBridge == 'undefined') {
+							if (document.addEventListener) {
+								document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+							} else if (document.attachEvent) {
+								document.attachEvent('WeixinJSBridgeReady', onBridgeReady);
+								document.attachEvent('onWeixinJSBridgeReady', onBridgeReady);
+							}
+						} else {
+							onBridgeReady();
+						};
+				}else if(payType == 1){   //能量支付
+					if (res.datas == 1) {
+						/*$('.nnegliangkuang2').show();*/
+						//$('.nlzfanniu2').click(function(){
+							//$('.nnegliangkuang2').hide();
+							//遵循uml时序图原则 先清空，再设置
+							//window.localStorage.setItem("orderFlag","");//d
+						    //window.localStorage.setItem("orderFlag",orderType);//dingdanid
+							window.location.href="http://testwan-vc.yxwenge.com/danche/cgbmbssucces.html?state=1&orderFlag="+orderType+"&orderNo="+orderNo;
+						//})
+					} 	
+				}
+			}else if(res.code == '1051'){//能量不足
+					var alrr = $('.promptBox2').show().html('能量不足');
+						 setTimeout(function(){alrr.fadeOut()},1000);
+
+						
+			}else {
+				alert(res.message);
+			}
+		},
+		error:function(err) {
+				alert("网络异常") 
+		}
+	}) 	
+}
+
+
+
+
+
+
+/*function zhifu(){
+	payType = $('.onpay').attr('payType');
+	orderId = localStorage.getItem('orderId');
+	orderNo = localStorage.getItem('orderNo');
+	cID = localStorage.getItem('ctID');
+	openID = localStorage.getItem('yxwhOpenId');
+	energy = localStorage.getItem('eny');
+	orderEnergy = localStorage.getItem('orderEnergy');
+
+	//alert("1energy"+energy+"1orderEnergy"+orderEnergy);
+
+	/*if(payType == 1){
+		if(energy < orderEnergy){
+			alert("能量不足");
+		}
+		//return;
+	}*/
+	//alert("123:"+localStorage.getItem('eny'));
+
+/* 	$.ajax({
+		url:onconfig.url_test1+"/rest/depokerOrder/depokerPay",//德扑赛事支付接口
+		dataType: "JSONP",
+		type: "GET",
+		data: {
+			'orderType':1,
+			'payType':payType, 
+			'orderId':orderId,
+			'openId':openID,
+			'citizenId':cID
+		}, 
+		success: function(res) {
+			if(res.code == '1000'){
+				if(payType == 3){ //微信支付
+					var payData = res.datas;
+						function onBridgeReady() {//微信收银台
+							WeixinJSBridge.invoke(
+								'getBrandWCPayRequest',
+								{
+						 			appId: payData.appId, //公众号名称，由商户传入
+									nonceStr: payData.nonceStr, //随机串
+									package: payData.package, //统一下单接口返回的prepay_id参数值，提交格式如
+									signType: 'MD5',
+									paySign: payData.paySign, //微信签名  后台
+									timeStamp: payData.timeStamp //时间戳，自1970年以来的秒数
+								},
+								function(res) {
+									console.log(res)
+									//微信支付成功后的操作，但是不一定会成功返回
+									if (res.err_msg == 'get_brand_wcpay_request:ok') {
+											//遵循uml时序图原则 先清空，再设置
+										//window.localStorage.setItem("orderFlag","");//d	
+									   // window.localStorage.setItem("orderFlag",orderType);//dingdanid
+										window.location.href="http://testwan-vc.yxwenge.com/danche/cgbmbssucces.html?state=1&orderFlag="+orderType+"&orderNo="+orderNo;
+									}
+								}
+							);
+						};
+						if (typeof WeixinJSBridge == 'undefined') {
+							if (document.addEventListener) {
+								document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+							} else if (document.attachEvent) {
+								document.attachEvent('WeixinJSBridgeReady', onBridgeReady);
+								document.attachEvent('onWeixinJSBridgeReady', onBridgeReady);
+							}
+						} else {
+							onBridgeReady();
+						};
+				}else if(payType == 1){   //能量支付
+
+					if (res.datas == 1) {
+						$('.nnegliangkuang2').show();
+						$('.nlzfanniu2').click(function(){
+							$('.nnegliangkuang2').hide();
+							//遵循uml时序图原则 先清空，再设置
+							//window.localStorage.setItem("orderFlag","");//d
+						    //window.localStorage.setItem("orderFlag",orderType);//dingdanid
+							window.location.href="http://testwan-vc.yxwenge.com/danche/cgbmbssucces.html?state=1&orderFlag="+orderType+"&orderNo="+orderNo;
+						})
+					} 	
+				}
+			}else if(res.code == '1051'){//能量不足
+					var alrr = $('.promptBox2').show().html('能量不足');
+						 setTimeout(function(){alrr.fadeOut()},1000);
+
+						
+			}else {
+				alert(res.message);
+			}
+		},
+		error:function(err) {
+				alert("网络异常") 
+		}
+	}) 	
+} */
+
+
+

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+  	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+ 	<meta name="format-detection" content="telephone=no">
+ 	<meta name="format-detection" content="email=no" />
+ 	<script type="text/javascript" src="public/fs.js"></script>
+ 	<script type="text/javascript" src="public/jquery.js"></script>
+ 	<link rel="stylesheet" type="text/css" href="css/common.css">
+ 	<link rel="stylesheet" type="text/css" href="css/style.css">
+ 	<link rel="stylesheet" type="text/css" href="css/style1.css">
+	<title>报名支付成功页面</title>
+</head>
+<body>
+	<div class="pay_success">
+		<div class="suc_title">
+			<img src="images/suc.png">
+		</div>
+		<ul class="success_infor">
+			<li class="success_infor_li1">
+				<span>活动时间：</span>
+				<span class="time_star"></span>
+			</li>
+			<li>
+				<span>活动地点：</span><strong class="bisai_Address"></strong>
+			</li>
+			<li>
+				<span>备注：</span>请牢记活动时间及活动地点，准时到现场参与活动。
+			</li>
+			<li>
+				现场凭借手机号进行活动检录。
+			</li>
+		</ul>
+  		<dl class="success_dl">
+			<dt>
+				 <img src="images/ewm.jpg">  
+			</dt>
+			<dd>
+				<img src="images/pay_left.png"> 
+			</dd>
+		</dl> 	
+	</div>
+ 	<div class="Urlbutton">
+		<button class="Urlbutton_li1 Urlbutton_li" orderType='2' disabled onclick="fugou()">重购</button>
+		<button class="Urlbutton_li2 Urlbutton_li" orderType='3' disabled onclick="jiama()">加码</button>
+		<button class="Urlbutton_li3 Urlbutton_li" orderType='4' disabled onclick="biansai()">边赛</button>
+	<div>  
+	<div class="payOff_but" id="tanzhuan_he">查看活动详情</div>
+</body>
+</html>
+<script type="text/javascript" src="js/paymentsucces.js"></script>
+

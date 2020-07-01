@@ -1,0 +1,552 @@
+body{
+	width: 100%;
+	margin: 0 auto;
+    position: relative;
+    overflow-x: hidden;
+    background: #1C1C28;
+    /* font-family: "MicrosoftYaHei"; */
+}
+/* //======================================大标题页================================// */
+ .swapper{
+	margin-bottom: 7rem;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+}  
+
+/* 大标题 */
+.headertitle{
+	overflow: hidden;
+	position: relative;
+}
+.topbanner{
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+.headertitle h2{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.headertitle h2 p{
+	color: #fff;
+	margin-top: 7rem;
+	text-align: center;
+	font-size: 2.4rem;
+	line-height: 3rem;
+}
+/* 中间区域 */
+.main{
+	overflow:hidden;
+	position: relative;
+}
+.main_time{
+	margin-top: 1rem;
+	color: #05DDD5;
+	font-weight: bold;
+	font-size: 1.7rem;
+	margin-left: 2.6rem;
+	margin-bottom: 3.3rem;
+}
+.main_menu{
+
+	margin-left:2.5rem;
+	margin-right: 2.5rem;
+}
+.main_menu li{
+	overflow: hidden;
+	color: #fff;
+	font-size: 1.3rem;
+	margin-bottom: 1.4rem;
+}
+.main_menu li span{
+	float: left;
+	display: inline-block;
+	width: 1.7rem;
+	height: 1.7rem;
+	margin-right:1.0rem;
+}
+.main_menu li:last-child p{
+ 	/* line-height: 2.5rem; */
+}
+.span_pic_01{
+	background: url(../images/bg_1.png) no-repeat;
+	background-size: 100% 100%;
+}
+.span_pic_02{
+	background: url(../images/bg_2.png) no-repeat;
+	background-size: 100% 100%;
+}
+.span_pic_03{
+	background: url(../images/bg_3.png) no-repeat;
+	background-size: 100% 100%;
+}
+.span_pic_04{
+	background: url(../images/bg_4.png) no-repeat;
+	background-size: 100% 100%;
+	margin-bottom: 1rem;
+}
+/* 规则区域 */
+.ruletmain{
+	opacity: 0.7;
+	margin:0 2rem;
+	border-radius: 0.2rem;
+	background: rgba(45,53,65,1);
+}
+.ruletmain h2{
+	padding:1rem 0;
+	margin:0 auto;
+	height: 3.8rem;
+	width: 11.2rem;
+	background: url(../images/rulemaintit.png)  no-repeat center;
+	background-size: 11.2rem 3.8rem;
+}
+.rulet_main{
+	margin:0 1.8rem 0 1.8rem; 
+	padding-bottom: 4.5rem;
+}
+.rulet_main li{
+	color: #C1D2DC; 
+	font-size:1.2rem;
+	line-height: 2.4rem;
+}
+
+/* 底部按钮 */
+.footerbut{
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+ 	background:url(../images/button_bg.png)no-repeat;
+ 	background-size: 100% 100%;
+}
+.footerbut p{
+	color: #21273B;
+	margin: 1.2rem 1.8rem;
+	height: 4.5rem;
+	font-size:1.7rem;
+	font-weight: bold;
+	text-align: center; 
+	line-height: 4.5rem;
+	background: #FFE401;
+	border-radius:0.2rem;
+}
+/*  ///============================================登录注册页=========================================================// */
+.mengceng{
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	background:rgba(0,0,0,0.5);
+}
+.form_box{
+	background: rgba(0,0,0,0.8);
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    height: 20.0rem;
+    margin-left: -40%;
+    margin-top: -10.0rem;
+    border-radius: 0.6rem;
+}
+.laginForm{
+	margin:0 1rem;
+}
+/* 登录注册样式 star*/
+.FormBox{
+	width: 100%;
+	height: 4.4rem;
+	position: relative;
+	line-height: 4.4rem;
+	margin-top:2rem;
+	border-radius:0.6rem;
+}
+/* FormBox两个公共的样式 */
+.PositionBG{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	background: rgba(81,83,105,1);
+	opacity: 0.5;
+}
+
+.usernameid,.userpassword{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	color: #fff;
+	outline:none;
+	text-indent: 1.5rem;
+	font-size: 1.2rem;
+	border-radius: 0.6rem;
+	background: transparent;
+}
+/*  input框 */
+.usersend{
+	position: absolute;
+	top: 0;
+	right:1.5rem;
+	height: 100%;
+	outline: none;
+	color:#FFEA01 ;
+	font-size:1.2rem;
+	background: transparent;
+}
+/* 验证码 */
+.usersubmit{
+	width: 100%;
+	height: 4.4rem;
+	margin-top: 2.6rem;
+}
+/* .submitbot{
+	width: 100%;
+	height: 100%;
+	color: #1C1D24;
+	font-weight: bold;
+	font-size: 1.6rem;
+	text-align: center;
+	border-radius: 0.6rem;
+	background: #FFEA01;
+	border:0;
+} */
+.submitbotss{
+	width: 100%;
+	height: 100%;
+	color: #1C1D24;
+	font-weight: bold;
+	font-size: 1.6rem;
+	text-align: center;
+	border-radius: 0.6rem;
+	background: #FFEA01;
+	border:0;
+}
+/* 提交注册按钮 */
+.footer{}
+.footer p{
+	margin-top: 8.5rem;
+	font-size: 1.4rem;
+	color:#B0A101;
+ 	text-align: center;
+}
+.footer p img{
+	display: block;
+	display: inline-block;
+	width: 2.3rem;
+	height: 1.3rem;
+}
+
+.tankuang{
+ 	position: absolute;
+	bottom: 30%;
+	left: 50%;
+	background:#fff;
+	color: #000;
+	height:5rem;
+	width: 80%;
+	margin-left:-40%;
+	margin-top: 0rem; 
+	text-align: center;
+	font-size: 1.6rem;
+	line-height: 5rem;
+	display: none;
+	border-radius: 0.6rem;
+}
+/* 登录注册样式 end*/
+ 
+/* //==============================支付页面====================================================// */
+.paywap{
+	display: block;
+	background:url(../images/payfeiybg.png) no-repeat;
+	background-size: 100%;
+}
+.pay{
+	margin:0 2.0rem;
+}
+.pay_mony,.pay_qian{
+	color: #FFE401;
+	margin-left: 9rem;
+    font-size: 1.3rem;
+    margin-top: -3rem;
+    
+}
+.gr_nengliang,.gr{
+	font-size: 1rem;
+    color: #FFE401;
+    position: absolute;
+    bottom: 0.5rem;
+    left: 4.2rem;
+}
+.pay_number{
+	margin: 4rem 1rem 2rem;
+	color: #fff;
+	font-size:1.3rem;
+}
+.pay_number:before{
+	left: 4rem;
+	top: 0rem;
+	content: "";
+	position: absolute;
+	width: 8.0rem;
+	height: 5.5rem;
+	background: url(../images/payqb.png) no-repeat;
+	background-size: 100% 100%;
+}
+.pay_number p{
+	margin-left: 9rem;
+}
+.pay_number .font_text{
+	font-size: 1.5rem;
+}
+.pay_number p span{
+	height: 8.0rem;
+	font-size: 2.1rem;
+	line-height: 8.0rem;
+}
+.pay_mode li{
+	position: relative;
+	color: #fff;
+	height: 6.0rem;
+	font-size: 1.4rem;
+	border-bottom:1px solid #252740;
+}
+.pay_mode li span{
+	float: left;
+	width:3.0rem;
+	height: 3.0rem;
+	display: inline-block;
+	margin: 1.3rem 1.3rem 1.3rem 0;
+}
+.pay_mode li em{
+	position: absolute;
+	right: 0;
+	top:1.8rem;
+	width: 2.6rem;
+	height: 2.6rem;
+	background: url(../images/ybg.png) no-repeat;
+	background-size:100% 100%;
+ }
+.pay_mode li p{
+	line-height: 6.0rem;
+}
+.pay_modepic_01{
+	background: url(../images/w.png) no-repeat;
+	background-size: 100% 100%;
+}
+.pay_modepic_02{
+	background: url(../images/n.png) no-repeat;
+	background-size: 100% 100%;
+}
+.pay_modepic_03{
+	background: url(../images/y.png) no-repeat;
+	background-size: 100% 100%;
+}
+.payOff,.payOff_but{
+	position: fixed;
+    bottom: 1.5rem;
+    width: 90%;
+    margin: 0 1.5rem;
+    color: #21273B;
+    height: 4.5rem;
+    line-height: 4.5rem;
+    background: #FFE401;
+    font-size: 1.7rem;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0.2rem;
+    margin-top: 5.1rem;
+}
+.promptBox{
+	display: none;
+	text-align: center;
+	color: #fff;
+ 	width: 60%;
+    position: fixed;
+    margin: 0 20%;
+    bottom: 8rem;
+    border-radius: 2rem;
+    height: 3rem;
+    line-height: 3rem;
+    font-size: 1.4rem;
+    background:rgba(6,9,23,1);
+	opacity:0.52;
+}/* //提示框 */
+.pay_mode .onpay em{
+	background: url(../images/yuan.png) no-repeat right center;
+	background-size: 100% 100%;
+}
+/* //=====================================支付成功页面========================================================// */
+.pay_success{
+	position: relative;
+	margin:3.0rem 5% 0 5%;
+	border:1px solid #1C1C28; 
+	background: url(../images/sucbg.png) no-repeat;
+	background-size: 100% 100%;
+}
+.suc_title{
+	width: 13.5rem;
+	margin:2.8rem auto 2.0rem;
+}
+.success_infor{
+	margin-bottom: 15rem
+}
+.success_infor li{
+	font-size: 1.3rem;
+	line-height: 2.8rem;
+	margin:0 2.8rem 0 2.0rem;
+}
+.success_infor li span{
+	font-weight: bold;
+}
+.success_dl{
+	position: absolute;
+	bottom: 0;
+}
+.success_dl dt{
+	float: left;
+	height: 9.2rem;
+	width: 9.2rem;
+	margin:1.9rem;
+}
+.success_dl dd{
+	float: left;
+	width: 13rem;
+	margin-top:4rem;
+}  
+ 
+/* .payOff,.payOff_but{同上} */
+ 
+
+/* /////////////////////////////////边赛 重购 加码//////////////////////////////////////////////// */
+
+.pay_text_san{
+	color: #fff;
+    font-size: 1.3rem;
+	text-align: center;
+	margin-bottom: 2rem;
+}
+.pay_text_san span{
+	color: #FFE401;
+}
+
+/* //复用支付页面 */
+ 
+/* //===================================边赛 重购 加码成功页面===================================================// */
+ 
+.S_succesWap{
+}
+.sanbgBox{
+	position: relat ;
+	margin: 6.7rem 2.1rem 0 2.1rem;
+	border:1px solid #1C1C28; 
+	background: url(../images/sanbgBox.png) no-repeat;
+	background-size: 100% 100%;
+}
+.sanbgBox h2{
+	margin:3.9rem 0;
+	font-size: 2.8rem;
+	text-align: center;
+	color: #1C1C28;
+	font-weight: bold;
+}
+.sanbgBox h2 em{
+    width: 2.9rem;
+    height: 2.9rem;
+    background: url(../images/baosucces.png) no-repeat;
+    background-size: 100% 100%;
+    display: inline-block;
+    vertical-align: bottom;
+    margin-right: 1rem;
+}
+.sanText{
+	margin:0 2.0rem;
+}
+.sanText li{
+	color: #000;
+	line-height: 3.2rem;
+	font-size: 1.4rem;
+	font-weight: bold;
+}
+.sanText li span{
+	float: right;
+	color: #4A506A;
+}
+.tiaoma{
+	width: 80%;
+	margin:2.3rem 10% 3.1rem 10%; 
+}
+
+
+ 
+ 
+ .alertkuang{
+ 	display: none;
+     position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    background: #fff;
+    text-align: center;
+    margin-top: -29%;
+    margin-left: -40%;
+    font-size: 2rem;
+    padding: 2rem 0;
+}
+
+
+	.nnegliangkuang{
+	   /*  display: none;
+	   position: fixed;
+	   top: 50%;
+	   left: 50%;
+	   width: 80%;
+	   height: 20%;
+	   background: #fff;
+	   text-align: center;
+	   margin-top: -29%;
+	   margin-left: -40%;
+	   font-size: 2rem;
+	   line-height: 5rem; */
+	color: #fff;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    height: 20%;
+    background: #2A2D3C;
+    text-align: center;
+    margin-top: -29%;
+    margin-left: -40%;
+    font-size: 1.8rem;
+    line-height: 5rem;
+    border-radius: 5px; 
+	}
+	.nlzfanniu{
+    margin: 1rem;
+    border-top: 1px solid #252835;
+    text-align: center;
+    font-size: 1.8rem;
+		/* border:1px solid #ccc;
+		text-align: center;
+		font-size: 2rem; */
+	}
+.swapper .main .Count_down{
+		white-space: nowrap;
+		font-weight: bold;
+		color: #05DDD5;
+		font-size: 1.2rem;
+		position: absolute;
+		right: 1rem;
+		top: 0;
+	}
