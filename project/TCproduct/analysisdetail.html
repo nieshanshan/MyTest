@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>数据详情</title>
+</head>
+<body>
+	<h2 class="detailsh2">白银 当日内: 新一轮上升。</h2>
+	<div class="iconban"></div>
+	<p class="content"></p>
+</body>
+</html>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/Interface.js"></script><!-- 接口地址 -->
+<script type="text/javascript">
+function GetQueryString(name) {  //获取url中"?"符后的字符串
+    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+    var r = window.location.search.substr(1).match(reg);  //获取url中"?"符后的字符串并正则匹配
+    var context = "";
+    if (r != null)
+        context = r[2];
+    reg = null;
+    r = null;
+    return context == null || context == "" || context == "undefined" ? "" : context;
+}
+//思路：（由于接口返回的详情在数据接口里面以数组形式展示）上级页1.数组转json存localstrore 2.a标签传i（顺序）本页1.接数据转数组取值 
+var num = GetQueryString("num")
+var data = localStorage.getItem("data");
+var arrdata= JSON.parse(data);//转换成对象
+//console.log('顺序'+num)
+//console.log('字符串类型'+data);
+//console.log(arrdata[num]);
+//console.log(arrdata[num].paragraph_arr)
+$('.detailsh2').text(arrdata[num].story_title);
+$('.iconban').html('<img src="'+arrdata[num].alternative_media+'">')
+$('.content').text(arrdata[num].paragraph_arr)
+var sss = arrdata[num].paragraph_arr;
+/*console.log(sss)
+var xxx = sss.split("。") + "<br/>"*/
+/*console.log( sss.slice(0) + "<br/>")
+console.log( sss.slice(1) + "<br/>")
+console.log( sss.slice(2) + "<br/>")*/
+</script>

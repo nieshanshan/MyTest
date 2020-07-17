@@ -1,0 +1,135 @@
+ .form{
+    margin-top: 0.2rem;
+    height: 0.4rem;
+    line-height: 0.4rem;
+    padding: 0 0.34rem;
+}
+.label{
+    margin-right: 0.38rem;
+    font-size: 0.16rem;
+    color: #000;
+}
+ 
+.butation{
+    cursor: pointer;
+    border-radius: 0.04rem;
+    margin:0.3rem 0.34rem;
+    background: #0486FE;
+    font-size: 0.14rem;
+    height: 0.4rem;
+    line-height:0.4rem;
+    text-align: center; 
+}
+.result h2{
+    color: #000;
+    text-align: center;
+    font-size: 0.2rem;
+    margin-bottom:0.16rem;
+}
+.resultUL{
+    margin:0 0.1rem;
+}
+.resultUL li{
+    background: #F2F2F2;
+    border-radius: 0.14rem;
+    margin-bottom:0.08rem;
+    padding:0.15rem 0.24rem 0.1rem 0.24rem;
+}
+.resultUL li p{
+    height: 100%;
+    overflow: hidden;
+    font-size: 0.14rem;
+    font-weight:400;
+    line-height: 0.32rem;
+    color:rgba(87,87,87,0.70);
+}
+.resultUL li p span{
+    float: right;
+}
+.resultUL li p:first-child {
+    overflow: hidden;
+    color: #000;
+    font-size: 0.16rem;
+    font-weight: 600; 
+}
+
+.rate{
+    margin-top: -0.1rem;
+    color: #FF0202;
+    font-size: 0.1rem;
+}
+.AUD{
+    margin-top: -0.15rem;
+    color:#666;
+    font-size: 0.14rem;
+}
+ 
+
+
+/* //////// */
+.varietiesmenu{
+    position: relative;
+    font-size: 0.14rem;
+    color: #909399;
+    height: 0.4rem;
+    width: 2rem;
+    border:0;
+    border:1px solid #D8DCE6;
+    border-radius:0.04rem;
+}
+.menu{
+    width: 100%;
+    height: 100%;
+    border:0;
+    font-size: 0.14rem;
+    color: #909399;
+    text-indent: 0.14rem;
+}
+.MENUS{
+    z-index: 3;
+    display: none;
+    cursor: pointer;
+    margin-left: -1px;
+    position: absolute;
+    width: 100%;
+    background: #fff;
+    border:1px solid #D8DCE6;
+    border-top-left-radius: 0.04rem;
+    border-top-right-radius: 0.04rem;
+    border-bottom-left-radius: 0.04rem;
+    border-bottom-right-radius: 0.04rem;
+}
+.MENUS li{
+    cursor: pointer;
+    color: #909399;
+    text-indent: 0.14rem;
+    border-top:1px solid #D8DCE6;
+}
+ 
+.varietiesmenu:after{
+    position: absolute;
+    content:" ";
+    width: 0.15rem;
+    height: 0.15rem;
+    background: red;
+    top: 0.12rem;
+    right:0.1rem;
+    background: url(../imgs/jiantoudown.png) no-repeat;
+    background-size:100% 100%;
+}
+.green:after{
+    position: absolute;
+    content:" ";
+    width: 0.15rem;
+    height: 0.15rem;
+    background: red;
+    top: 0.12rem;
+    right:0.1rem;
+    background: url(../imgs/jiantoudown.png) no-repeat;
+    background-size:100% 100%;
+    transform:rotate(189deg);
+    -ms-transform:rotate(180deg); /* Internet Explorer */
+    -moz-transform:rotate(180deg); /* Firefox */
+    -webkit-transform:rotate(180deg); /* Safari 和 Chrome */
+    -o-transform:rotate(180deg); /* Opera */
+}

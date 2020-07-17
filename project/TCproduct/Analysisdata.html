@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>数据列表</title>
+	<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">  
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  	<link rel="stylesheet" href="css/Analysisdata.css">
+</head>
+<style>
+	.loading{
+		width: 100%;
+	}
+</style>
+<body>
+<div class="row">
+<div class="panel">
+<div class="panel-body">
+<table class="TCTable table table-striped table-bordered table-hover">
+<thead>
+	<tr>
+		<th colspan="3" style="width: 50%">技术分析</th>
+		<th colspan="1" style="width: 20%">周趋势<i class="glyphicon glyphicon-question-sign" data-toggle="tooltip" data-placement="top" title="周趋势─让您可以透过选择上升、有限上升、整固、下降、有限下降几个选项来筛选研究。" data-original-title="周趋势─让您可以透过选择上升、有限上升、整固、下降、有限下降几个选项来筛选研究。"></i></th>
+		<th colspan="1" style="width: 20%">月趋势<i class="glyphicon glyphicon-question-sign" data-toggle="tooltip" data-placement="top" title="月趋势─让您可以透过选择牛市、熊市、盘整市几个选项来筛选研究。" data-original-title="月趋势─让您可以透过选择牛市、熊市、盘整市几个选项来筛选研究。"></i></th>
+		<th rowspan="2" style="width: 10%; vertical-align: middle;">收盘价</th>
+	</tr>
+	<tr>
+		<th style="width: 10%">品种</th>
+		<th style="width: 15%">日期</th>
+		<th style="width: 25%">简介</th>
+		<th style="width: 10%">预测</th>
+		<!-- <th style="width: 10%">变化</th>  colspan="2"  -->
+		<th style="width: 10%">预测</th>
+<!-- 		<th style="width: 10%">变化</th> -->
+	</tr>
+</thead>
+<tbody id="TechnicalAnalysisBody" class="TechnicalAnalysisBody">
+	<div class="loading"><img src="imgs/loading1.gif" alt="加载中"></div>
+ 
+<!-- 	<tr>
+	<td>Gold spot</td>
+	<td>07/09/2020 06:43</td>
+	<td><a href="/newsposter/home/index/10816139/zh-CN" target="_blank" class="PopWindowNewsPoster">黄金 当日内: 上升趋势。</a></td>
+	<td class="dataone">上升</td>
+	<td class="datatwo">=</td>
+	<td class="datathree">下降</td>
+	<td class="datafour">=</td>
+	<td>1811.4</td>
+</tr> -->
+
+</tbody>
+</table>
+<div id="page" class="page" style = "display: none"></div><!-- 分页 -->
+</body>
+</html> 
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/Interface.js"></script><!-- 接口地址 -->
+<script type="text/javascript" src="js/xlPaging.js"></script><!-- 分页插件 -->
+<script type="text/javascript" src="js/Analysisdata.js"></script>

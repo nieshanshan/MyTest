@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="email=no" />
+    <script type="text/javascript" src="js/fs.js"></script>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="css/Contractalculator.css">
+<title>合约计算器</title>
+</head>
+<body>
+<div class="page">
+    <div class="calculation">
+        <form class="form">
+            <label class="label fl">交易品种</label>
+            <div class="varietiesmenu fl variet1">
+                <p class="menu menu1">选择种类</p>
+                <ul class="MENUS MENUS1">
+                    <li>1add</li>
+                    <li>2act</li>
+                    <li>3eat</li>
+                </ul>
+            </div>
+        </form>
+        <form class="form">
+            <label class="label fl">杠杆比例</label>
+            <div class="varietiesmenu fl variet2">
+                <p class="menu menu2">选择杠杆</p>
+                <ul class="MENUS MENUS2">
+                    <li>3</li>
+                    <li>2</li>
+                    <li>1</li>
+                </ul>
+            </div>
+        </form>
+        <form class="form">
+            <label class="label fl">杠杆比例</label>
+            <div class="varietiesmenu fl variet3">
+                <p class="menu menu3">选择种类</p>
+                <ul class="MENUS MENUS3">
+                    <li>a</li>
+                    <li>b</li>
+                    <li>c</li>
+                </ul>
+            </div>
+        </form>     
+        <div class="butation">交易手数</div>
+    </div>
+    <div class="result">
+        <h2>计算结果</h2>
+        <ul class="resultUL">
+            <li>
+                <p> 
+                    保证金
+                    <span>≈ 3.45USD</span><br>              
+                    <span class="rate">*按照当前汇率USD/AUD 1.3735</span><br>
+                    <span class="AUD">= 5.00AUD</span>
+                </p>
+                <p>手数<span>0.01</span></p>
+                <p>合约单位<span>x 100,000</span></p>
+                <p>杠杆比例<span>➗200</span></p>
+            </li>
+            <li>
+                <p> 
+                    保证金
+                    <span>≈ 3.45USD</span><br>               
+                    <span class="rate">*按照当前汇率USD/AUD 1.3735</span><br>
+                    <span class="AUD">= 5.00AUD</span>
+                </p>
+                <p>手数<span>0.01</span></p>
+                <p>合约单位<span>x 100,000</span></p>
+                <p>杠杆比例<span>➗200</span></p>
+            </li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>
+<script type="text/javascript">
+//选择品种
+$('.menu1').on('click',function(){//点击选择品种里面的种类显示 再点消失
+    $('.MENUS1').toggle();
+    $('.variet1').addClass('green');//箭头向下添加属性
+});
+$('.MENUS1 li').on('click',function(){
+    var html= $(this).text();//取出点击的文字
+    $('.menu1').text(html);//文字替换
+    $('.MENUS1').hide();//li模块隐藏
+    $('.variet1').removeClass('green');//箭头向下清除属性
+})
+//选择杠杆
+$('.menu2').on('click',function(){//点击选择品种里面的种类显示 再点消失
+    $('.MENUS2').toggle();
+    $('.variet2').addClass('green');//箭头向下添加属性
+});
+$('.MENUS2 li').on('click',function(){
+    var html= $(this).text();//取出点击的文字
+    $('.menu2').text(html);//文字替换
+    $('.MENUS2').hide();//li模块隐藏
+    $('.variet2').removeClass('green');//箭头向下清除属性
+})
+//选择其他
+$('.menu3').on('click',function(){//点击选择品种里面的种类显示 再点消失
+    $('.MENUS3').toggle();
+    $('.variet3').addClass('green');//箭头向下添加属性
+});
+$('.MENUS3 li').on('click',function(){
+    var html= $(this).text();//取出点击的文字
+    $('.menu3').text(html);//文字替换
+    $('.MENUS3').hide();//li模块隐藏
+    $('.variet3').removeClass('green');//箭头向下清除属性
+})
+</script>
+ 

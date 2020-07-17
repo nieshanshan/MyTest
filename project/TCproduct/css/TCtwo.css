@@ -1,0 +1,360 @@
+.page{
+
+}
+.head{
+	height:2.02rem;
+}
+.logo1{
+ 	width: 3.96rem;
+ 	height: 1.92rem;
+ 	margin:0 0.55rem 0 0.64rem;
+
+}
+.logo2{
+	width: 2.34rem;
+	height: 1.9rem;
+	margin: 0 0.64rem 0 0.55rem;
+}
+.nav a{
+	line-height: 2.02rem;	
+	font-size: 0.48rem;
+	color: #525252;
+	margin-right:2.0rem;/* gai */
+}
+.banner{
+	width: 100%;
+	height: 12.8rem;
+	overflow: hidden;
+	background: url(../imgs/banner.png) no-repeat;
+	background-size:100% 100%;
+	position: relative;
+}
+.shows{
+	width: 100%;
+	height: 100%;
+	background:rgba(0,0,0,0.6);
+}
+.mains{
+	position: absolute;
+	top: 0;
+	left:0;
+	width: 100%;
+	height: 100%;
+/* 	background:pink; */
+}
+.cooperation{
+	margin-top:2.4rem;
+	text-align: center;
+	font-size: 0.94rem;
+}
+.cooperation span{
+	margin-left:0.7rem;
+}
+.coopertext{
+	margin-top:1.96rem;
+	text-align: center;
+	font-size:0.94rem;
+}
+.analysis{
+	text-align: center;
+	margin: 2.34rem 0 2.4rem 0;
+}
+.analysis span{
+	border:1px solid #fff;
+	border-radius:0.54rem;
+	padding:0.16rem 0.46rem;
+	font-size:0.52rem;
+}
+.analysis span:nth-child(2){
+	margin:0 4.72rem 0 5.18rem;
+}
+.TradingCentral{
+	overflow: hidden;
+	padding-bottom:0.82rem;
+}
+.TradingCentral h2{
+	padding:1.3rem 2.56rem 0.92rem 2.56rem; 
+	font-size: 0.84rem;
+	color:#585858;
+}
+.Tradingtext{
+	padding-left:2.56rem;
+	width:20.6rem;
+	color:#585858;
+	font-size:0.44rem;
+	line-height:0.8rem;
+}
+.Tradingtext p{
+	margin-bottom:0.4rem;
+}
+.Tradingtimg{
+	width: 12.0rem;
+	height: 7.94rem;
+	margin-left:1.04rem;
+}
+.Productone{
+	position: relative;
+	width: 100%;
+	height:9.5rem;
+	overflow: hidden;
+	background: url(../imgs/Product.png) no-repeat;
+	background-size:100% 100%;
+}
+.showProdu{
+
+	width: 100%;
+	height: 100%;
+	background:rgba(0,0,0,0.6);
+}
+.showProdu{
+	position: absolute;
+	top: 0;
+	left:0;
+	width: 100%;
+	height: 100%;
+	/* background: pink; */
+}
+.pduoneleft{
+	 width: 20.68rem;
+	 overflow: hidden;
+}
+.pduoneleft h2{
+	font-size: 0.84rem;
+	padding:1.34rem 0 0 2.56rem;
+}
+.pduoneleft p{
+	font-size: 0.44rem;
+	line-height: 0.8rem;
+	padding:1.06rem 0 0 2.56rem;
+}
+.pduoneright{
+	margin:1.34rem 0 0 1.9rem;
+	overflow: hidden;
+	width: 9.64rem;
+
+}
+.pduoneright img{
+	width: 9.64rem;
+	height: 4.9rem;
+	margin-bottom: 1.26rem;
+}
+.promore{
+	
+	background:#43C5FF;
+	display:block;
+	border-radius: 0.14rem;
+	width: 2.72rem;
+	height: 1.04rem;
+	margin:0 auto;
+	line-height: 1.04rem;
+	font-size: 0.36rem;
+	color: #fff;
+	font-weight: 600;
+	text-align: center;
+}
+
+.Producttwo{
+	overflow: hidden;
+	margin-bottom:0.96rem;
+}
+.Producttwo h2{
+	height: 2.8rem;
+	line-height: 2.6rem;
+	margin-left:2.42rem;
+	font-size: 0.84rem;
+	color: #585858;
+}
+.Protwoimg{
+	width: 8.9rem;
+	height: 5.94rem;
+	margin-right:4.62rem;
+	margin-left:2.42rem;
+}
+.Protwotext{
+	font-size: 0.44rem;
+	color: #7E7E7E;
+}
+ 
+.plainput{
+	margin-top: 1.46rem;
+	margin-left:3.94rem;
+    width:7.94rem;
+    height:1.6rem;
+    display: block;
+    background:rgba(255,255,255,1);
+    border:1px solid #ccc;
+    font-size: 0.44rem;
+    text-indent: 0.38rem;
+    color:rgba(165,165,165,1);
+   
+}
+.btn1{
+	cursor: pointer;
+ 	margin-top: 1.74rem;
+ 	margin-left:0.78rem;
+	width:2.72rem;
+	height:1.04rem;
+	background:rgba(67,197,255,1);
+	border-radius:0.14rem;
+	text-align: center;
+	font-size:0.36rem;
+	font-family:PingFang SC;
+	font-weight:600;
+	line-height:1.04rem;
+	color:rgba(255,255,255,1);
+}
+.MT4{
+	width: 100%;
+	height: 22.4rem;
+	/* height:18.0rem; */
+	overflow: hidden;
+	background: url(../imgs/MT4bg.png) no-repeat;
+	background-size:100% 100%;
+}
+.upwn{
+	position: relative;
+}
+.upopcity{
+	overflow: hidden;
+	width: 100%;
+	height: 18.0rem;
+	background: #000;
+	opacity:0.75;
+	z-index: -1;
+}
+.upment{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	overflow: hidden;
+	width: 100%;
+	height: 18.0rem;
+}
+.MT4 h2{
+	padding:1.24rem 2.42rem 0.7rem 2.42rem;
+	font-size:0.84rem;
+	color:rgba(255,255,255,1);
+}
+.MT4ul{
+	overflow: hidden;
+	padding: 0 2.42rem;
+}
+.MT4ul li{
+	margin-right:3.14rem;
+ 	width: 8.7rem;
+	float: left;
+}
+.MT4ul li:last-child{
+	margin:0;
+}
+.MT4ul li img{
+	width: 8.7rem;
+	height: 7.4rem;
+}
+.MY4p{
+	text-align: center;
+	font-size: 0.64rem;
+}
+.Mt4twop{
+	margin-bottom:0.4rem;
+	margin-top: 0.64rem;
+	text-align: center;
+	font-size: 0.44rem;
+}
+.Mt4link{
+	padding:1.8rem 0;
+	overflow: hidden;	
+}
+.Mbut{
+	font-weight: 600;
+	background: #43C5FF;
+	font-size: 0.36rem;
+	text-align: center;
+	color: #fff;
+	width: 2.72rem;
+	height: 1.04rem;
+	line-height: 1.04rem;
+	border-radius: 0.14rem;
+} 
+.Mctload{
+	margin-left:13.76rem;
+	margin-right:5.16rem;
+}
+.dowm{
+	position: relative;
+}
+.statementopcity{
+	overflow: hidden;
+	width: 100%;
+	height: 4.4rem;
+	background:rgba(255,255,255,1);
+	opacity:0.75;
+	z-index: -1;
+}
+.statement{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	overflow: hidden;
+	width: 100%;
+	height: 4.4rem;
+}
+.statement p{
+	padding:0.76rem 2.7rem;
+	font-size: 0.36rem;
+	font-weight: 600;
+	line-height: 0.8rem;
+	color:rgba(119,119,119,1);
+}
+.Tips{
+	margin-top:1.8rem;
+	text-align: center;
+	color: red;
+	font-size: 0.32rem;
+}
+
+@media (max-width: 320px) {
+	html{font-size: 8.33px;}
+} 
+@media (max-width: 360px) {
+	html{font-size: 9.38px;}
+} 
+@media (max-width: 375px) {
+	html{font-size: 9.77px;}
+} 
+@media (max-width: 414px) {
+	html{font-size: 10.78px;}
+} 
+@media (max-width: 480px) {
+	html{font-size: 12.5px;}
+} 
+@media (min-width: 768px) {
+	html{font-size: 20px;}
+} 
+@media (min-width: 960px) {
+	html{font-size: 25px;}
+} 
+@media (min-width: 1024px){
+	html{font-size: 26.67px}
+} 
+@media (min-width: 1100px) {
+	html{font-size: 28.65px}
+} 
+@media (min-width: 1280px) {
+	html{font-size: 33.33px;}
+} 
+@media (min-width: 1366px) {
+	html{font-size: 35.57px;}
+}  
+@media (min-width: 1440px) {
+	html{font-size: 37.5px;}
+} 
+@media (min-width: 1680px) {
+	html{font-size: 43.75px;}
+} 
+/*1比50rem 1920/50=38.4倍率 按此计算1680/38.4 1440/38.4*/
+@media (min-width: 1920px) {
+	html{font-size: 50px;}
+} 

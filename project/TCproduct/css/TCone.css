@@ -1,0 +1,290 @@
+.page{
+	width:38.4rem;
+	margin: 0 auto;
+	background:rgba(26,28,62,1);
+}
+.head{
+	height: 3.38rem;
+
+}
+.logo1{
+	width: 2.28rem;
+	height: 0.92rem;
+	margin: 1.26rem 0 0 0.8rem;
+}
+.logo2{
+	width: 1.4rem;
+	height: 1.14rem;
+	margin: 1.14rem 0 0 0.52rem;
+}
+.headp{
+	width:21.68rem;
+	height:1.5rem;
+	font-size:0.28rem;
+	font-weight:400;
+	line-height:0.5rem;
+	color:rgba(255,255,255,1);
+	margin: 1.24rem 0 0 0.9rem;
+}
+.lookmore{
+	background:rgba(67,197,255,0);
+	border:1px solid rgba(67,197,255,1);
+	border-radius:0.14rem;
+	font-size:0.32rem;
+	font-weight:600;
+	color:rgba(255,255,255,1);
+	margin: 1.56rem 1.7rem 0 0;
+	text-align: center;
+	line-height: 1;
+	padding: 0.24rem 0.6rem;
+}
+.cent{
+	width: 37.1rem;
+	margin: 0 auto;
+}
+.centL{
+	background: #252749;
+	padding-bottom: 0.6rem;
+	width:18.2rem;
+}
+.centR{
+	width:18.2rem;
+}
+.titleh2{
+	height:0.6rem;
+	font-size:0.44rem;
+	font-weight:600;
+	line-height:0.6rem;
+	color:rgba(255,255,255,1);
+	padding: 0.4rem 0.56rem 0;
+}
+.introduce{
+	width:16.68rem;
+	height:1.5rem;
+	font-size:0.28rem;
+	font-weight:400;
+	line-height:0.5rem;
+	color:rgba(255,255,255,1);
+	margin: 0.4rem 0.96rem 0.6rem 0.56rem;
+}
+.list{
+	/* overflow-y: scroll; */
+	height: 12.8rem;
+	/*解决ios上滑动不流畅*/
+	-webkit-overflow-scrolling: touch;
+}
+.list::-webkit-scrollbar {display:none}
+.list li{
+	width:14.12rem;
+	height:2.0rem;
+	background:rgba(60,60,91,1);
+	margin:0 auto 0.7rem;
+}
+.liLimg{
+	width: 1.76rem;
+	height: 1.64rem;
+	margin: 0.18rem 0.2rem 0.18rem 0.12rem;
+}
+.box{
+	position: relative;
+	width: 70%;
+	overflow: hidden;
+}
+.box h3{
+	height: 2.0rem;
+}
+.box p{
+	position: absolute;
+	right: 0;
+	font-size:0.28rem;
+	line-height:2.0rem;
+	color:rgba(255,255,255,1);
+}
+.box h3 span{
+	display: block;
+	height:0.56rem;
+	font-size:0.4rem;
+	font-weight:400;
+	line-height:0.56rem;
+	color:rgba(255,255,255,1);
+	margin: 0.3rem 0 0.4rem 0;
+}
+.b{
+	position: absolute;
+/* 	border:1px solid red; */
+ 	width: 100%;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	display: block;
+	font-size:0.24rem;
+	line-height:0.7rem;
+	font-weight: normal;
+	color:rgba(255,255,255,1);
+}
+.liRimg{
+	width: 1.0rem;
+	height: 1.0rem;
+	margin: 0.5rem 0.3rem;
+}
+.centRtop{
+	height:7.8rem;
+	background:rgba(37,39,73,1);
+}
+.mt4{
+	width: 5.86rem;
+	height: 3.3rem;
+	margin: 1.44rem 0.4rem 0 0.54rem;
+}
+.frbox{
+	width:10.4rem;
+}
+.frbox p{
+	font-size:0.4rem;
+	line-height:0.5rem;
+	font-weight:600
+	color:rgba(255,255,255,1);
+	margin-bottom: 1.18rem;
+}
+.frbox input{
+	width:7.48rem;
+	height:0.9rem;
+	display: block;
+	background:rgba(255,255,255,1);
+	border:1px solid rgba(112,112,112,1);
+	font-size:0.28rem;
+	text-indent: 0.24rem;
+	color:rgba(175,175,175,1);
+	border: none;
+	margin: 0 auto 0.58rem;
+}
+.frbox input::-webkit-input-placeholder {
+	color:rgba(175,175,175,1);
+}
+.frbox h4{
+	width:2.46rem;
+	background:rgba(67,197,255,1);
+	border-radius:0.14rem;
+	text-align: center;
+	font-size:0.32rem;
+	line-height:1;
+	color:rgba(255,255,255,1);
+	margin: 0 auto;
+	padding: 0.24rem 0.24rem;
+	/* padding: 0.24rem 0; */
+	cursor: pointer;
+}
+.frbox ul{
+	padding-left: 1.12rem;
+	margin-bottom: 0.7rem;
+}
+.frbox ul li{
+	height:0.44rem;
+	font-size:0.32rem;
+	font-weight:600;
+	line-height:0.8rem;
+	color:rgba(255,255,255,1);
+	margin-bottom: 0.36rem;
+	position: relative;
+}
+.frbox ul li:before{
+	content: "";
+	width:0.12rem;
+	height:0.12rem;
+	background:rgba(0,255,235,1);
+	border-radius:50%;
+	position: absolute;
+	top: 0.32rem;
+	left: -0.2rem;
+}
+.Tips{
+	margin-top: 0.3rem;
+	text-align: center;
+	color: red;
+	font-size: 0.32rem;
+}
+.foot{
+	clear: both;
+	font-size:0.28rem;
+	font-weight:400;
+	line-height:0.5rem;
+	padding: 0.46rem 0 0.46rem 1.24rem;
+	color:rgba(255,255,255,1);
+}
+.load{
+
+}
+.load img{
+	display: block;
+	width: 30px;
+	height: 30px;
+	margin:50px auto 0;
+}
+
+@media (max-width: 320px) {
+	html{font-size: 8.33px;}
+} 
+@media (max-width: 360px) {
+	html{font-size: 9.38px;}
+} 
+@media (max-width: 375px) {
+	html{font-size: 9.77px;}
+} 
+@media (max-width: 414px) {
+	html{font-size: 10.78px;}
+} 
+@media (max-width: 480px) {
+	html{font-size: 12.5px;}
+	.page,.cent,.centL,.centR{
+		width: 100%;
+	}
+	.centL{
+		margin-bottom: 1.1rem;
+	}
+	.lookmore{
+		clear: both;
+		float: left;
+		margin: 1rem 0 1rem 5.9rem;
+	}
+	.introduce{
+		width: 90%;
+	}
+	.list li{
+		width: 80%;
+	}
+	.frbox{
+		width: 55%;
+	}
+	.headp,.introduce,.foot{
+		height: auto;
+		line-height: 0.8rem;
+	}
+} 
+@media (min-width: 768px) {
+	html{font-size: 20px;}
+} 
+@media (min-width: 960px) {
+	html{font-size: 25px;}
+} 
+@media (min-width: 1024px){
+	html{font-size: 26.67px}
+} 
+@media (min-width: 1100px) {
+	html{font-size: 28.65px}
+} 
+@media (min-width: 1280px) {
+	html{font-size: 33.33px;}
+} 
+@media (min-width: 1366px) {
+	html{font-size: 35.57px;}
+}  
+@media (min-width: 1440px) {
+	html{font-size: 37.5px;}
+} 
+@media (min-width: 1680px) {
+	html{font-size: 43.75px;}
+} 
+/*1比50rem 1920/50=38.4倍率 按此计算1680/38.4 1440/38.4*/
+@media (min-width: 1920px) {
+	html{font-size: 50px;}
+} 

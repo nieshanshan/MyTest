@@ -1,0 +1,199 @@
+.page{
+	background:#fff;
+	overflow: hidden;
+ 
+}
+.header{
+	width: 100%;
+	height: 13.82rem;
+	background: url(../images/pcbgbanner.png) no-repeat;
+	background-size: 100% 100%
+}
+.logo{
+	display: block;
+	width: 5.02rem;
+	padding:0.74rem;
+}
+.header_dl{
+	width:65%;
+	margin:1.12rem auto 0;
+	display: flex;
+}
+.header_dl dd{
+	padding-top: 1.62rem;
+	overflow: hidden;
+}
+.text{
+	white-space: nowrap;
+	height: 2.4rem;
+	line-height: 2.4rem;
+	color: #fff;
+	font-size: 1.48rem;
+	font-family:FZLTZCHJW--GB1-0;
+}
+.text span{
+	white-space: nowrap;
+	height: 2.4rem;
+	line-height: 2.4rem;
+	font-weight: bold;
+	font-size: 1.88rem;
+	font-family:ZhenyanGB-Regular;
+	color:rgba(255,255,255,1);
+}
+.text2{
+	margin: 0.34rem auto 0;
+	display: block;
+	width: 15.36rem;
+}
+.header_dl dt{
+	margin-left: 1.64rem;
+	overflow: hidden;
+}
+.eq{
+	width:6.38rem;
+	height: 6.38rem;
+	display: block;
+}
+.text3{
+	white-space: nowrap;
+	font-size:0.56rem;
+	text-align: center;
+	font-weight: 500;
+	height: 1.2rem;
+	line-height: 1.2rem;
+	font-family:PingFangSC-Regular;
+	color:rgba(255,255,255,1);
+}
+.content{
+	margin:0.92rem auto 0.52rem;
+	height: 7.7rem;
+	overflow: hidden;
+	width: 24.0rem;
+	background:#fff;
+	box-shadow:0px 2px 20px rgba(133,133,133,0.15);
+	border-radius: 0.4rem;
+}
+.content_h2{
+	margin-top: 0.86rem;
+	margin-left: 0.72rem;
+	font-weight: 600;
+	font-size: 0.52rem;
+	color:rgba(32,64,126,1);
+	height: 0.62rem;
+	line-height: 0.62rem;
+}
+.content_ul{
+	display: flex;
+	overflow: hidden;
+}
+.content_ul li{
+	margin-right: 3.34rem;
+}
+.content_ul li:last-child{
+	margin-right: 0;
+}
+.content_zu{
+	display: block;
+	width: 5.72rem;
+}
+.content_p{
+	white-space: nowrap;
+	font-size: 0.4rem;
+	text-align: center;
+	height: 0.56rem;
+	line-height: 0.56rem;
+	color:rgba(32,64,126,1);
+}
+.main{
+	overflow: hidden;
+	margin:0 auto;
+	width: 25.2rem;
+	height: 7.94rem;
+	background:url(../images/pcthreebg.png) no-repeat;
+	background-size: 100% 100%;
+}
+.main_text{
+	margin:1.46rem 1.28rem 0 1.44rem;
+}
+.main_h3,.main_h4{
+	text-align: center;
+	height: 0.62rem;
+	line-height: 0.62rem;
+	color:rgba(32,64,126,1);
+}
+.main_h3{
+	font-weight: bold;
+	font-size: 0.76rem;
+}
+ 
+.main_h4{
+	font-size: 0.52rem;
+	margin-top: 0.3rem;
+	margin-bottom:0.74rem;
+}
+.main_p{
+	line-height:0.9rem;
+	font-family:PingFangSC-Regular;
+	font-size: 0.48rem;
+	color: #20407E;
+}
+.footer{
+	overflow: hidden;
+}
+.footer p{
+	height: 0.56rem;
+	line-height: 0.56rem;
+	text-align: center;
+	color:rgba(110,110,110,1);
+	font-family:PingFangSC-Regular;
+	font-size: 0.4rem;
+
+}
+.footer p:last-child{
+	padding-bottom:0.64rem;
+}
+ 
+
+/* @media (max-width: 320px) {
+	html{font-size: 8.33px;}
+} 
+@media (max-width: 360px) {
+	html{font-size: 9.38px;}
+} 
+@media (max-width: 375px) {
+	html{font-size: 9.77px;}
+} 
+@media (max-width: 414px) {
+	html{font-size: 10.78px;}
+} 
+@media (max-width: 480px) {
+	html{font-size: 12.5px;}
+} 
+@media (min-width: 768px) {
+	html{font-size: 20px;}
+} 
+@media (min-width: 960px) {
+	html{font-size: 25px;}
+}  */
+@media (min-width: 1024px){
+	html{font-size: 26.67px}
+} 
+@media (min-width: 1100px) {
+	html{font-size: 28.65px}
+} 
+@media (min-width: 1280px) {
+	html{font-size: 33.33px;}
+} 
+@media (min-width: 1366px) {
+	html{font-size: 35.57px;}
+}  
+@media (min-width: 1440px) {
+	html{font-size: 37.5px;}
+} 
+@media (min-width: 1680px) {
+	html{font-size: 43.75px;}
+} 
+/*1比50rem 1920/50=38.4倍率 按此计算1680/38.4 1440/38.4*/
+@media (min-width: 1920px) {
+	html{font-size: 50px;}
+} 
