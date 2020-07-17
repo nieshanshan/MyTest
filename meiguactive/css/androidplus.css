@@ -1,0 +1,90 @@
+.page{
+	width: 100%;
+	height: 100%;
+}
+.up{
+	overflow: hidden;
+	background: url(../images/andbg2.png) no-repeat;
+	background-size: 100%  100%;
+}
+.logo{
+	margin:0.12rem 0.16rem;
+	width: 0.9rem;
+	display: block;
+	height: 100%;
+}
+.text{
+	height: 0.36rem;
+	line-height: 0.36rem;
+	margin-top:0.5rem; 
+	font-size: 0.3rem;
+	font-family:"FZLTZCHJW--GB1-0";
+	color:rgba(255,255,255,1);
+	text-align: center;
+}
+.imgtext{
+	display: block;
+	width: 2.86rem;
+	margin: 0.08rem auto 0;
+}
+/* .texttwo{
+	height: 0.3rem;
+	line-height: 0.3rem;
+	margin-top: 0.08rem;
+	font-size: 0.17rem;
+	text-align: center;
+	color:rgba(255,255,255,1);
+	font-family:PingFangSC-Regular;
+} */
+.eq{
+	display: block;
+	width: 1.5rem;
+	margin: 0.46rem auto 0.1rem;
+}
+.textthree{
+ 	height: 0.26rem;
+ 	line-height: 0.26rem;
+	font-size: 0.15rem;
+	text-align: center;
+	color:rgba(255,255,255,1);
+	font-family:"PingFangSC-Regular";
+	margin-bottom:1rem;
+}
+.down{
+	background:#fff;
+	overflow: hidden;
+	width: 100%;
+}
+.down_h2{
+	height: 0.26rem;
+	line-height: 0.26rem;
+	margin:0.15rem 0.135rem 0.075rem 0.135rem;
+	font-size:0.14rem;
+	color:#183E82;
+	font-weight: 600;
+	font-family: "FZLTZCHJW--GB1-0";
+}
+.down_ul{
+	display: flex;
+	width: 100%;
+	overflow: hidden;
+}
+.down_ul li{
+	margin-left: 0.23rem;
+}
+.icon{
+	overflow: hidden;
+	display: block;
+	width: 0.9rem;
+}
+.textfour{
+	overflow: hidden;
+	white-space: nowrap;
+	height: 0.16rem;
+	line-height: 0.16rem;
+	font-size: 0.11rem;
+	text-align: center;
+	color:rgba(24,62,130,1);
+	font-family:"PingFangSC-Regular";
+	padding-bottom: 0.1rem;
+}

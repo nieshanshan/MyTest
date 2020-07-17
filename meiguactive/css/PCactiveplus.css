@@ -454,11 +454,16 @@
     top: -1rem;
     right: 7.5rem;
 	color: #000;
-	background:#3D93E7;
+/* 	background:#3D93E7; */
 	width: 1.0rem;
 	height: 1.0rem;
 	line-height: 1.0rem;
 	border-radius: 50% 50%;
+}
+.BOX_CLOSE img{
+	display: block;
+	width: 100%;
+	height: 100%;
 }
 
  @media (max-width: 320px) {
