@@ -15,9 +15,13 @@
 	padding:0.74rem;
 }
 .header_dl{
-	width:65%;
+	width: 65%;
+    margin: 0 auto;
+    display: flex;
+    padding-top: 3rem;
+	/* width:65%;
 	margin:1.12rem auto 0;
-	display: flex;
+	display: flex; */
 }
 .header_dl dd{
 	padding-top: 1.62rem;
