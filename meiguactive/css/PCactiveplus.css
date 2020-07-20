@@ -323,6 +323,9 @@
 	line-height: 0.9rem;
 	padding: 0 1.3rem;
 }
+.str1 p span{
+	margin:0 1rem;
+}
 .rewards_plus{
 	height: 20.18rem;
 	background: #fff;
