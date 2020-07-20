@@ -142,7 +142,7 @@ align-items: center; */
 }
 .page .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
  
-    top:1.8rem;
+    bottom:2.4rem;
     left: 0;
     width: 100%;
 }
