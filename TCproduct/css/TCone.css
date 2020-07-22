@@ -47,7 +47,8 @@
 	border: 1px solid rgba(67,197,255,1);
 	position: absolute;
 	right: 5%;
-	top: 3%;
+	top: 7%;
+/* 	top: 3%; */
 	font-size: 16px;
 	font-weight: 600;
 	padding: 9px 30px;
@@ -55,6 +56,7 @@
 	color: rgba(255,255,255,1);
 }
 .centL{
+	position: relative;
 	margin-left:1%;
 	width: 48%;
 	height: 100%;
@@ -76,6 +78,7 @@
 	padding: 1% 2%;
 }
 .introduce{
+	width: 75%;
 	height: 9%;
 	/* height:75px;  */
 	font-size:14px;
