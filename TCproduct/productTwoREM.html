@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="css/common.css">
-	<link rel="stylesheet" type="text/css" href="css/TCtwo.css">
+	<link rel="stylesheet" type="text/css" href="css/TCtwo.css?v=1">
 	<title>Tc产品2</title>
 </head>
 <body>
@@ -108,3 +108,33 @@
 <script type="text/javascript" src="js/Interface.js"></script><!-- 接口地址 -->
 <script src="http://pv.sohu.com/cityjson?ie=utf-8"></script><!-- 获取客户端ip地址 和 地区位置 --> 
 <script type="text/javascript" src="js/productTwoREM.js"></script>
+<script type="text/javascript">
+$(function () {            
+            //绑定滚动条事件
+              //绑定滚动条事件
+            $(window).bind("scroll", function () {
+                var sTop = $(window).scrollTop();
+                var sTop = parseInt(sTop);
+                if (sTop >= 130) {
+                    if (!$("#scrollSearchDiv").is(":visible")) {
+                        try {
+                            $("#scrollSearchDiv").slideDown();
+                        } catch (e) {
+                            $("#scrollSearchDiv").show();
+                        }                      
+                    }
+                }
+                else {
+                    if ($("#scrollSearchDiv").is(":visible")) {
+                        try {
+                            $("#scrollSearchDiv").slideUp();
+                        } catch (e) {
+                            $("#scrollSearchDiv").hide();
+                        }                       
+                    }
+                } 
+            });
+        })
+ 
+
+</script>

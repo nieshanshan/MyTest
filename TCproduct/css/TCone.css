@@ -5,11 +5,11 @@
 }
 .head{
 	display: flex;
-	height: 10%;
+	height: 14%;
 	width: 100%;
 }
 .cent{
-	height:85%;
+	height:82%;
 	width: 100%;
 /* 	background: pink; */
 }
